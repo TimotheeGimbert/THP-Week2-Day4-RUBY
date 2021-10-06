@@ -4,7 +4,7 @@ arrayJ = ["@jcunniet","@PaulLampon","@Aziliz31","@ssoumier","@marionsouzeau","@g
 def findShortest(array)
   currentShortest = array[0]
   array.each { |handle|
-    if (handle.length < currentShortest.length)
+    if handle.length < currentShortest.length
       currentShortest = handle
     end
   }
@@ -12,10 +12,20 @@ def findShortest(array)
 end
 
 
-
+def count5chars(array)
+  counted = 0
+  array.each { |handle|
+    if handle.length == 6
+      counted += 1
+    end
+  }
+  return counted
+end
 
 # MAIN
 
 puts "1) Il y a #{arrayJ.length} journalistes dans la base."
 shortestHandle = findShortest(arrayJ)
 puts "Le handle le plus court du array est : #{shortestHandle}"
+nb5charsHandle = count5chars(arrayJ)
+puts "Il y a en tout #{nb5charsHandle} journalistes dont l'email fait 5 caractères."
