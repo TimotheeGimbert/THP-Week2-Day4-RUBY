@@ -44,5 +44,10 @@ puts "3) Il y a en tout #{nb5charsHandle} journalistes dont le pseudo fait 5 car
 nbCapitalized = countCapitalized(arrayJ)
 puts "4) On trouve #{nbCapitalized} pseudos commençant par une majuscule."
 
+puts "5) Pour afficher le tableau trié par ordre alphabétique, appuyer sur ENTER"
+gets.chomp
 puts arrayJ.sort_by { |word| word.downcase }
-puts "5) C'était le tableau trié par ordre alphabétique, majuscule ou non !"
+
+puts "6) Pour afficher les pseudos triés par taille, appuyer sur ENTER"
+gets.chomp
+puts arrayJ.sort_by { |word| word.length }
