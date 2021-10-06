@@ -31,7 +31,6 @@ def countCapitalized(array)
   return counted
 end
 
-
 # MAIN
 
 puts "1) Il y a #{arrayJ.length} journalistes dans la base."
@@ -44,3 +43,6 @@ puts "3) Il y a en tout #{nb5charsHandle} journalistes dont le pseudo fait 5 car
 
 nbCapitalized = countCapitalized(arrayJ)
 puts "4) On trouve #{nbCapitalized} pseudos commençant par une majuscule."
+
+puts arrayJ.sort_by { |word| word.downcase }
+puts "5) C'était le tableau trié par ordre alphabétique, majuscule ou non !"
