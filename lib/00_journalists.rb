@@ -51,3 +51,6 @@ puts arrayJ.sort_by { |word| word.downcase }
 puts "6) Pour afficher les pseudos triés par taille, appuyer sur ENTER"
 gets.chomp
 puts arrayJ.sort_by { |word| word.length }
+
+ePosition = arrayJ.index("@epenser")
+puts "7) @epenser est en position #{ePosition}"
