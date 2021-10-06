@@ -21,13 +21,26 @@ def countNchars(array, n)
   return counted
 end
 
-
+def countCapitalized(array)
+  counted = 0
+  array.each { |handle|
+    if handle[1].capitalize! == nil 
+      counted += 1
+    end
+  }
+  return counted
+end
 
 
 # MAIN
 
 puts "1) Il y a #{arrayJ.length} journalistes dans la base."
+
 shortestHandle = findShortest(arrayJ)
 puts "2) Le handle le plus court du array est : #{shortestHandle}"
+
 nb5charsHandle = countNchars(arrayJ, 5)
-puts "3) Il y a en tout #{nb5charsHandle} journalistes dont l'email fait 5 caractères."
+puts "3) Il y a en tout #{nb5charsHandle} journalistes dont le pseudo fait 5 caractères."
+
+nbCapitalized = countCapitalized(arrayJ)
+puts "4) On trouve #{nbCapitalized} pseudos commençant par une majuscule."
