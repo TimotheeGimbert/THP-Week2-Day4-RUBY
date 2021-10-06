@@ -11,21 +11,23 @@ def findShortest(array)
   return currentShortest    
 end
 
-
-def count5chars(array)
+def countNchars(array, n)
   counted = 0
   array.each { |handle|
-    if handle.length == 6
+    if handle.length == (n+1)
       counted += 1
     end
   }
   return counted
 end
 
+
+
+
 # MAIN
 
 puts "1) Il y a #{arrayJ.length} journalistes dans la base."
 shortestHandle = findShortest(arrayJ)
-puts "Le handle le plus court du array est : #{shortestHandle}"
-nb5charsHandle = count5chars(arrayJ)
-puts "Il y a en tout #{nb5charsHandle} journalistes dont l'email fait 5 caractères."
+puts "2) Le handle le plus court du array est : #{shortestHandle}"
+nb5charsHandle = countNchars(arrayJ, 5)
+puts "3) Il y a en tout #{nb5charsHandle} journalistes dont l'email fait 5 caractères."
