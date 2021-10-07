@@ -30,3 +30,8 @@ puts puts
 puts "4) Pour voir les cryptos de valeur inférieure à $6000, appuyer sur ENTER"
 gets.chomp
 print cryptosBelow6000
+
+puts puts
+highestTokenBelow6k = cryptosBelow6000.max_by{|a,b| b }
+puts "5) La crypto la plus chère en dessous de 6k$ est #{highestTokenBelow6k[0]} et vaut $#{sprintf('%.8f', highestTokenBelow6k[1])}"
+puts
