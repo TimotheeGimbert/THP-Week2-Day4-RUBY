@@ -19,3 +19,14 @@ puts
 cheapestToken = cryptos.min_by{|k,v| v}
 puts "3) La crypto la moins chère est #{cheapestToken[0]} et vaut $#{sprintf('%.8f', cheapestToken[1])}"
 puts
+
+cryptosAbove6000 = cryptos.select{|k,v| v > 6000}
+cryptosBelow6000 = cryptos.select{|k,v| v < 6000}
+puts "Les seules cryptos dont la valeur vaut plus que $6000 sont les suivantes :"
+print cryptosAbove6000
+puts puts
+puts "NB : Les prix sont obsolètes. BITCOIN VAUT AUJOURD'HUI PLUS DE 50k$ ^^"
+puts puts
+puts "4) Pour voir les cryptos de valeur inférieure à $6000, appuyer sur ENTER"
+gets.chomp
+print cryptosBelow6000
