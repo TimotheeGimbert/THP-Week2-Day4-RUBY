@@ -7,7 +7,12 @@ prices = []
 prices_string.each {|handle| prices.push(handle.to_f)} 
 
 cryptos = tokens.zip(prices)
-puts "Pour voir le Hash des cryptos et leur prix, appuyer sur ENTER"
+puts "1) Pour voir le Hash des cryptos et leur prix, appuyer sur ENTER"
 gets.chomp
-print cryptos
+print cryptos 
+puts puts
 
+highestToken = cryptos.max_by{|k,v| v}
+
+puts "2) La crypto la plus chère est #{highestToken[0]} et vaut #{highestToken[1]}"
+puts
