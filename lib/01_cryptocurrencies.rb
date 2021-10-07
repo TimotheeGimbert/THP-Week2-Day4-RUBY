@@ -14,10 +14,10 @@ def perform(tokens, prices)
   print cryptoHash 
   puts puts
   highest = cryptoHash.max_by{|k,v| v} # gets the key/value pair with the highest value v
-  puts "2) La crypto la plus chère est #{ highest[0] } et vaut $#{ highest[1] }"
+  puts "2) La crypto la plus chère est #{highest[0]} et vaut $#{highest[1]}"
   puts
   lowest = cryptoHash.min_by{|k,v| v} # Get the key/value pair with the lowest value v
-  puts "3) La crypto la moins chère est #{ lowest[0] } et vaut $#{ sprintf('%.8f', lowest[1]) }"
+  puts "3) La crypto la moins chère est #{lowest[0]} et vaut $#{sprintf('%.8f', lowest[1])}"
   puts
   below6K = cryptoHash.select{|k,v| v<6000}
   puts "4) Pour voir les cryptos de valeur inférieure à $6000, PRESS ENTER"
@@ -25,7 +25,7 @@ def perform(tokens, prices)
   print below6K
   puts puts
   highestBelow6K = below6K.max_by{|k,v| v}
-  puts "5) La crypto la plus chère en dessous de 6k$ est le #{ highestBelow6K[0] } et vaut $#{ highestBelow6K[1] }"
+  puts "5) La crypto la plus chère en dessous de 6k$ est le #{highestBelow6K[0]} et vaut $#{highestBelow6K[1]}"
   puts
 end
 
