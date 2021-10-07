@@ -13,6 +13,9 @@ print cryptos
 puts puts
 
 highestToken = cryptos.max_by{|k,v| v}
+puts "2) La crypto la plus chère est #{highestToken[0]} et vaut $#{highestToken[1]}"
+puts
 
-puts "2) La crypto la plus chère est #{highestToken[0]} et vaut #{highestToken[1]}"
+cheapestToken = cryptos.min_by{|k,v| v}
+puts "3) La crypto la moins chère est #{cheapestToken[0]} et vaut $#{sprintf('%.8f', cheapestToken[1])}"
 puts
